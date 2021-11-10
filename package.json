@@ -1,0 +1,20 @@
+{
+	"name": "re-request",
+	"version": "1.0.0",
+	"description": "A module based on the Request module. To manage API and proxy request.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrWolfDeveloper/re-Request.git"
+	},
+	"keywords": [ "http", "manage", "request", "api", "proxy" ],
+	"author": "MrWolfDeveloper (Github: https://github.com/MrWolfDeveloper)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MrWolfDeveloper/re-Request/issues"
+	},
+	"homepage": "https://github.com/MrWolfDeveloper/re-Request#readme"
+}
