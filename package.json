@@ -10,11 +10,20 @@
 		"type": "git",
 		"url": "git+https://github.com/MrWolfDeveloper/re-Request.git"
 	},
-	"keywords": [ "http", "manage", "request", "api", "proxy" ],
+	"keywords": [
+		"http",
+		"manage",
+		"request",
+		"api",
+		"proxy"
+	],
 	"author": "MrWolfDeveloper (Github: https://github.com/MrWolfDeveloper)",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/MrWolfDeveloper/re-Request/issues"
 	},
-	"homepage": "https://github.com/MrWolfDeveloper/re-Request#readme"
+	"homepage": "https://github.com/MrWolfDeveloper/re-Request#readme",
+	"dependencies": {
+		"mongoose": "^6.0.12"
+	}
 }
