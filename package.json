@@ -24,6 +24,7 @@
 	},
 	"homepage": "https://github.com/MrWolfDeveloper/re-Request#readme",
 	"dependencies": {
-		"mongoose": "^6.0.12"
+		"mongoose": "^6.0.12",
+		"path": "^0.12.7"
 	}
 }
