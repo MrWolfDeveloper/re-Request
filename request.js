@@ -139,6 +139,7 @@ function debug() {
 Request.prototype.debug = debug;
 
 Request.prototype.init = function(options) {
+	console.log(options, 'options');
 	// init() contains all the code to setup the request object.
 	// the actual outgoing request is not started until start() is called
 	// this function is called from both the constructor and on redirect.
@@ -184,8 +185,13 @@ Request.prototype.init = function(options) {
 			self._callbackCalled = true;
 			self._callback.apply(self, arguments);
 		};
-		self.on('error', self.callback.bind());
-		self.on('complete', self.callback.bind(self, null));
+		self.on('error', () => {
+			self.callback.bind();
+		});
+		self.on('complete', () => {
+			// console.log(self, 'self');
+			self.callback.bind(self, null);
+		});
 	}
 
 	// People use this property instead all the time, so support it
@@ -450,6 +456,7 @@ Request.prototype.init = function(options) {
 			}
 		}
 	}
+
 	if (self.body && !isstream(self.body)) {
 		setContentLength();
 	}
@@ -938,6 +945,7 @@ Request.prototype.onRequestResponse = function(response) {
 				total: self.timings.end
 			};
 		}
+
 		debug('response end', self.uri.href, response.statusCode, response.headers);
 	});
 
@@ -1117,6 +1125,7 @@ Request.prototype.onRequestResponse = function(response) {
 };
 
 Request.prototype.readResponseBody = function(response) {
+	// console.log(response.body);
 	var self = this;
 	debug("reading response's body");
 	var buffers = [];
